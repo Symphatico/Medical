@@ -1,35 +1,17 @@
-import React from "react";
-import { View, ImageBackground } from "react-native";
-import { Button, Input } from "react-native-elements";
-import { useNavigation } from "@react-navigation/native";
+import React, { useEffect, useState } from "react";
+import UserInvitado from "./UserInvitado";
+import UserRegistrado from "../screens/UserRegistrado";
+import Loading from "../components/Loading";
 
 export default function User() {
-  const navegar = useNavigation();
-  return (
-    <View style={estilo.container}>
-      <View style={estilo.btnContainer}>
-        <Button
-          onPress={() => navegar.navigate("Login")}
-          buttonStyle={estilo.btn}
-          title="Registrarse"
-        />
-      </View>
-    </View>
-  );
-}
+  const [login, setLogin] = useState(false);
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      !user ? setLogin(false) : setLogin(true);
+    });
+  }, []);
 
-const estilo = {
-  btnContainer: {
-    width: "80%",
-    justifyContent: "flex-end",
-    marginBottom: 100,
-  },
-  container: {
-    flex: 1,
-    alignItems: "center",
-    width: "100%",
-  },
-  btn: {
-    backgroundColor: "#a01935",
-  },
-};
+  if (login === null) return <Loading esVisible={true} texto={"Cargando..."} />;
+
+  return login ? <UserRegistrado /> : <UserInvitado />;
+}

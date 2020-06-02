@@ -45,13 +45,17 @@ function screenOptions(route, color) {
   let iconName;
   switch (route.name) {
     case "bienvenida":
-      iconName = "cat";
+      iconName = "hospital";
       break;
     case "Descripcion":
       iconName = "note-outline";
       break;
+    case "login":
+      iconName = "account";
     default:
       break;
   }
-  return <Icon type="material-community" name={iconName} size={22} />;
+  return (
+    <Icon type="material-community" color={color} name={iconName} size={22} />
+  );
 }

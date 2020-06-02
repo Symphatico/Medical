@@ -8,7 +8,13 @@ export default function BienvenidaStack() {
       <Stack.Screen
         name="Bienvenida"
         component={Bienvenida}
-        options={{ title: "Mis mascotas" }}
+        options={{
+          title: "Bienvenid@",
+          headerStyle: {
+            backgroundColor: "teal",
+          },
+          headerTintColor: "white",
+        }}
       />
     </Stack.Navigator>
   );

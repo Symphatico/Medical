@@ -8,7 +8,13 @@ export default function DescripcionStack() {
       <Stack.Screen
         name="Bienvenida"
         component={Descripcion}
-        options={{ title: "Descripcion de mis mascotas" }}
+        options={{
+          title: "Descripcion",
+          headerStyle: {
+            backgroundColor: "teal",
+          },
+          headerTintColor: "white",
+        }}
       />
     </Stack.Navigator>
   );

@@ -1,27 +1,20 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
-import { ListItem } from "react-native-elements";
-export default function App() {
+import { ListItem, Icon } from "react-native-elements";
+export default function UserRegistrado() {
   const list = [
     {
-      title: "Pais",
-      icon: "office-building",
+      title: "Citas",
     },
     {
-      title: "Procedimiento",
-      icon: "hospital",
+      title: "Doctores",
     },
   ];
 
   return (
     <View style={estilos.contenedor}>
       <View style={estilos.contenedor_titulo}>
-        <Text style={estilos.titulo}>MEDICAL</Text>
-        <Image
-          source={require("../../img/cruzverde.jpg")}
-          style={{ width: 200, height: 200 }}
-        />
-        <Text style={estilos.titulo}>Agenda una cita con nosotros!</Text>
+        <Text style={estilos.titulo}>CUENTA</Text>
       </View>
       <View style={estilos.lista}>
         {list.map((item, i) => (
@@ -49,5 +42,6 @@ const estilos = StyleSheet.create({
   },
   lista: {
     paddingTop: 10,
+    justifyContent: "center",
   },
 });

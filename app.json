@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Topicos1",
-    "slug": "Topicos1",
+    "name": "Medical",
+    "slug": "medical",
     "platforms": [
       "ios",
       "android",
@@ -23,6 +23,7 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "Pagina para agendar citas medicas."
   }
 }
