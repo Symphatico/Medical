@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-//Importar esto en el stack para login y reactnavegation
+
 export default function Login() {
   return (
     <View>

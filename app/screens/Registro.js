@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Image, Button } from "react-native";
 import { Input } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
-// import * as firebase from "firebase";
+import * as firebase from "firebase";
 import Loading from "../components/Loading";
 export default function Registro() {
   const [estado, setEstado] = useState(false);
